@@ -5,3 +5,12 @@ body {
     padding: 3rem 1.5rem;
     text-align: center;
 }
+
+.navbar {
+    background-color: rebeccapurple!important;
+}
+
+.titulo {
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: bold;
+}

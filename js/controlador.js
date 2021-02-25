@@ -1,3 +1,5 @@
+var localStorage = window.localStorage;
+
 ///-----------------------------------------------USUARIOS
 var usuarios = [
     {
@@ -58,7 +60,7 @@ var usuarios = [
 
 
 ///-----------------------------------------------CATEGORIAS
-var categorias = [
+var categorias = [ 
     {
         nombreCategoria:"Farmacias",
         descripcion:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
@@ -490,6 +492,26 @@ var categorias = [
         ]
     }
 ];
+
+//localStorage para categorias:
+
+if(localStorage.getItem('categorias') == null){
+    localStorage.setItem('categorias', JSON.stringify(categorias));
+}else{
+    categorias = JSON.parse(localStorage.getItem('categorias'));
+}
+
+//localStorage para usuarios:
+
+if(localStorage.getItem('usuarios') == null){
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+}else{
+    usuarios = JSON.parse(localStorage.getItem('usuarios'));
+}
+
+// Generando las categorias:
+
+
 
 console.log ('Usuarios', usuarios);
 console.log ('Categorias', categorias);
